@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="content__block">
-                        <button class="join-button">Записаться на турнир</button>
+                        <button class="button content__button">Записаться на турнир</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,16 @@
                         <div class="prize__money">3 000 ₽</div>
                     </div>
                     <div class="prize prize_special content__four-column-wide">
-                        + дополнительные секретные призы победителям
+                        <div class="accordion">
+                            <span class="accordion__sign">+</span> дополнительные секретные призы победителям
+                            <div class="accordion__content">
+                                <ul>
+                                    <li>секретный приз 1</li>
+                                    <li>секретный приз 2</li>
+                                    <li>секретный приз 3</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,5 +141,31 @@
             </div>
         </div>
     </div>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__title">Регистрация в турнире</div>
+            <button class="modal__close-button">X</button>
+            <div class="modal__fields">
+                <div class="field">
+                    <p class="field__label">Ник EFT</p>
+                    <input type="text" class="field__input" />
+                </div>
+                <div class="field">
+                    <p class="field__label">E-mail</p>
+                    <input type="text" class="field__input" />
+                </div>
+                <div class="field">
+                    <p class="field__label">Twitch</p>
+                    <input type="text" class="field__input" />
+                </div>
+                <div class="field">
+                    <p class="field__label">Discord</p>
+                    <input type="text" class="field__input" />
+                </div>
+            </div>
+            <button class="modal__button button">Отправить</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>

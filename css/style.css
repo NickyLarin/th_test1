@@ -130,6 +130,9 @@ button {
 .content__four-column-wide {
   grid-column: 1/span 4;
 }
+.content__button {
+  width: 100%;
+}
 
 .date-info {
   padding: 10px 25px;
@@ -221,8 +224,7 @@ button {
   line-height: 24px;
 }
 
-.join-button {
-  width: 100%;
+.button {
   padding: 8px 32px;
   color: #00B285;
   font-family: Inter;
@@ -230,13 +232,100 @@ button {
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
-  background-color: transparent;
+  background-color: #222222;
   border: 2px solid;
   border-color: #00B285;
   border-radius: 3px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
-.join-button:hover {
+.button:hover {
   border-color: #00cc98;
+  background-color: #2f2f2f;
+}
+
+.accordion_active > .accordion__content {
+  margin-top: 8px;
+  opacity: 1;
+}
+.accordion__content {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.25s ease;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+.modal_active {
+  display: flex;
+}
+.modal__content {
+  position: relative;
+  width: 40vw;
+  height: 40vh;
+  padding: 20px 32px;
+  background-color: #222222;
+  border-radius: 10px;
+}
+.modal__title {
+  margin-bottom: 16px;
+  color: #CEC7A6;
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 52px;
+}
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  color: #CEC7A6;
+  font-family: Inter;
+  background-color: #222222;
+  font-size: 36px;
+}
+.modal__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+  row-gap: 24px;
+}
+.modal__button {
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+}
+
+.field {
+  width: 100%;
+}
+.field__label {
+  color: #CEC7A6;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+.field__input {
+  height: 48px;
+  width: 100%;
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 28px;
+  background-color: #222222;
+  border: 2px solid;
+  border-color: #00B285;
+  border-radius: 3px;
 }
 
 .subtitle {
@@ -259,7 +348,7 @@ button {
 
 .hint {
   color: #ABABAB;
-  font-family: "Inter";
+  font-family: Inter;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
