@@ -155,7 +155,8 @@ button {
 .date-info {
     padding: 10px 25px;
     background: #363636;
-    border-radius: 5px;
+    overflow: hidden;
+    border-radius: 10px;
 
     font-family: Inter;
     font-style: normal;
@@ -177,6 +178,8 @@ button {
     position: relative;
     font-family: Inter;
     font-style: normal;
+    overflow: hidden;
+    border-radius: 10px;
 
     &__wrapper {
         position: absolute;
